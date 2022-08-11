@@ -1,0 +1,107 @@
+/* General */
+:root {
+  --main: #A8231E;
+  --primary: #F5706C;
+  --secondary: #FCDFDE;
+  --background: #fff4f4;
+}
+
+.container {
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Kanit";
+  box-sizing: border-box;
+}
+
+.graph, .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  color: var(--main);
+  background-color: var(--background);
+}
+
+/* Header */
+.header {
+  box-shadow: 1px 5px 5px var(--main);
+  animation: shadow 5s infinite;
+  z-index: 1;
+}
+
+@keyframes shadow {
+  50% {box-shadow: 1px 5px 5px var(--secondary);}
+}
+
+.header-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #A8231E;
+}
+
+/* General chart */
+.graph {
+  height: 70vh;
+  box-shadow: 1px 5px 5px var(--secondary);
+}
+
+.graph-container, .graph-rate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 0.1rem solid var(--main);
+  border-radius: 15px;
+  outline: 0.2rem solid var(--main);
+  outline-offset: .3rem;
+}
+
+.graph-container {
+  align-items: flex-end;
+  height: 80%;
+  width: 80%;
+}
+
+/* Exchange rate menu */
+.graph-rate {
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  height: 30%;
+  width: 40%;
+  background-image: conic-gradient(var(--background), var(--secondary));
+  z-index: 20;
+}
+
+.graph--rate-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-top: 0.1rem solid var(--main);
+  box-sizing: border-box;
+}
+
+.graph--close-button {
+  cursor: pointer;
+  padding: 2px 15px;
+  border: 0.1rem solid var(--main);
+  border-radius: 5px;
+  color: var(--main);
+  font-family: "Kanit";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.graph--hidden {
+  display: none;
+}
+
+
